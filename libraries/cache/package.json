@@ -1,0 +1,21 @@
+{
+  "name": "@vssanti/cache",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist",
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "jest --silent --no-cache -–runInBand"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.5"
+  },
+  "dependencies": {}
+}
