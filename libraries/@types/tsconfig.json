@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    // "lib": ["es2017"],
+    "target": "es5",
+    "module": "commonjs",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "strict": true,
+    "baseUrl": "src",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "node_modules/**/*",
+    "coverage/**/*",
+    "dist/**/*",
+    "_warmup/**/*",
+    ".vscode/**/*"
+  ]
+}

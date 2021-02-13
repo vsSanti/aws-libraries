@@ -1,6 +1,5 @@
 import { Redis as RedisClient } from 'ioredis';
-
-import GenericObject from './@types/GenericObject';
+import { GenericObject } from '@vssanti/types';
 
 import cacheClient from './cache.client';
 

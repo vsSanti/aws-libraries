@@ -1,8 +1,5 @@
 import { APIGatewayProxyResult } from 'aws-lambda';
-
-interface GenericObject {
-  [key: string]: any;
-}
+import { GenericObject } from '@vssanti/types';
 
 interface DataProps {
   data?: GenericObject;

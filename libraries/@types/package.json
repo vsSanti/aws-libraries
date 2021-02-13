@@ -1,6 +1,6 @@
 {
-  "name": "@vssanti/logger",
-  "version": "1.0.1",
+  "name": "@vssanti/types",
+  "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
   "types": "dist",
@@ -15,10 +15,6 @@
     "access": "public"
   },
   "devDependencies": {
-    "@types/aws-lambda": "^8.10.64",
     "typescript": "^4.0.5"
-  },
-  "dependencies": {
-    "@vssanti/types": "0.0.1"
   }
 }

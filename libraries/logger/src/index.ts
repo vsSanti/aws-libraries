@@ -1,10 +1,7 @@
 import { LogLevel, logLevelToString } from './logLevel';
+import { GenericObject } from '@vssanti/types';
 
 export { LogLevel } from './logLevel';
-
-interface GenericObject {
-  [key: string]: any;
-}
 
 interface LogFunctions {
   (message?: any, ...optionalParams: any[]): void;

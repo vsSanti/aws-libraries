@@ -1,6 +1,6 @@
 {
   "name": "@vssanti/cache",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "dist/index.js",
   "types": "dist",
@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "ioredis": "^4.22.0",
-    "ioredis-mock": "^5.2.1"
+    "ioredis-mock": "^5.2.1",
+    "@vssanti/types": "0.0.1"
   }
 }
