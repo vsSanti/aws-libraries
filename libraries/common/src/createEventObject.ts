@@ -1,6 +1,5 @@
 import { APIGatewayEvent } from 'aws-lambda';
-
-import GenericObject from './GenericObject';
+import { GenericObject } from '@vssanti/types';
 
 const defaultEvent: APIGatewayEvent = {
   body: null,

@@ -1,6 +1,6 @@
 {
   "name": "@vssanti/cache",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "dist/index.js",
   "types": "dist",
@@ -17,5 +17,7 @@
   "devDependencies": {
     "typescript": "^4.0.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@vssanti/types": "0.0.1"
+  }
 }
