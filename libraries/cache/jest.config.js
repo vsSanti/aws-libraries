@@ -16,4 +16,6 @@ module.exports = {
   ],
   // A list of reporter names that Jest uses when writing coverage reports
   coverageReporters: ['text-summary', 'lcov'],
+
+  setupFiles: ['<rootDir>/jest/setEnvVars.js'], // The paths to modules that run some code to configure or set up the testing environment before each test
 };

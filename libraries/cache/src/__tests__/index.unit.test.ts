@@ -3,6 +3,13 @@ import Cache from '../index';
 const cache = new Cache();
 
 describe('[REDIS] new index', () => {
+  afterAll(async (done) => {
+    await cache.invalidatePrefix('*');
+    cache.disconnect();
+
+    done();
+  });
+
   it('Should save and recover strings, with and without expiration time', async () => {
     await cache.save('value1', 'prefix', '1');
     await cache.save('value2', 'prefix', '2');

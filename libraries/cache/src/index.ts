@@ -10,6 +10,13 @@ export default class Cache {
     this.client = cacheClient;
   }
 
+  /**
+   * Disconnects redis client
+   */
+  disconnect(): void {
+    this.client.disconnect();
+  }
+
   private joinKeys(keys: string[]): string {
     return keys.join(':');
   }
