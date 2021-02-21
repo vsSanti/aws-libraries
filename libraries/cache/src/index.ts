@@ -1,13 +1,22 @@
-import { Redis as RedisClient } from 'ioredis';
+import Redis, { Redis as RedisClient } from 'ioredis';
+import RedisMock from 'ioredis-mock';
 import { GenericObject } from '@vssanti/types';
-
-import cacheClient from './cache.client';
 
 export default class Cache {
   private client: RedisClient;
 
   constructor() {
-    this.client = cacheClient;
+    /* istanbul ignore next */
+    if (process.env.NODE_ENV === 'test') {
+      this.client = new RedisMock();
+    } else {
+      this.client = new Redis({
+        host: process.env.REDIS_HOST,
+        password: process.env.REDIS_PASSWORD,
+        port: Number(process.env.REDIS_PORT) || 6379,
+        db: Number(process.env.REDIS_DATABASE) || 0,
+      });
+    }
   }
 
   /**
