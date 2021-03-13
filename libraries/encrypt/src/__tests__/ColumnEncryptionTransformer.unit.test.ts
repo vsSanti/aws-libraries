@@ -23,6 +23,26 @@ describe('[ENCRYPT] ColumnEncryptionTransformer', () => {
     expect(dec).toBe(sentence);
   });
 
+  it('Should encrypt if value is null', () => {
+    const transformer = ColumnEncryptionTransformer;
+
+    const enc = transformer.to(null);
+    const dec = transformer.from(null);
+
+    expect(enc).toBe(null);
+    expect(dec).toBe(null);
+  });
+
+  it('Should encrypt if value is undefined', () => {
+    const transformer = ColumnEncryptionTransformer;
+
+    const enc = transformer.to(undefined);
+    const dec = transformer.from(undefined);
+
+    expect(enc).toBe(null);
+    expect(dec).toBe(null);
+  });
+
   it('Should throw error if ENC_KEY or IV is not found', () => {
     process.env.ENCRYPTION_TRANSFORMER_IV = '';
     const sentence = 'Ínicio ação';

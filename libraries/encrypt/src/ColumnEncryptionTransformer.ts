@@ -31,8 +31,8 @@ export const decrypt = (encrypted: string): string => {
 };
 
 const ColumnEncryptionTransformer = {
-  from: (value: string): string => decrypt(value),
-  to: (value: string): string => encrypt(value),
+  from: (value: string | null | undefined): string | null => (value ? decrypt(value) : null),
+  to: (value: string | null | undefined): string | null => (value ? encrypt(value) : null),
 };
 
 export default ColumnEncryptionTransformer;
