@@ -66,7 +66,7 @@ const createEventObject = (data: DataProps): APIGatewayEvent => {
     body: data.body ? JSON.stringify(data.body) : null,
     requestContext: {
       ...defaultEvent.requestContext,
-      authorizer: data.authorizer,
+      authorizer: data.authorizer || {},
     },
     pathParameters: data.pathParameters || null,
     headers: {
